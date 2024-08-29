@@ -1,0 +1,185 @@
+:root {
+    --main-Color: #2e3192;
+    --firsttext-Color: #fff;
+    --secondtext-Color: #000;
+}
+
+
+/* ALl */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    margin: auto;
+}
+a {
+    text-decoration: none;
+}
+
+
+/* Media */
+@media (max-width: 360px) { 
+    .parent .container {
+    width: 280px;
+    }
+}
+/* Small devices X (landscape phones, 390px and up) */
+@media (min-width: 390px) { 
+    .parent .container {
+    width: 380px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    .parent .container {
+    width: 550px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .parent .container {
+    width: 720px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .parent .container {
+    width: 990px;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .parent .container {
+    width: 1200px;
+    }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .parent .container {
+    width: 1400px;
+    }
+}
+
+/* Media End */
+
+/* parent */
+
+.parent {
+    background-image: url(/Img/main_background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+/* Header Start */
+.parent header nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.parent header nav a {
+    color: var(--firsttext-Color);
+    font-size: 18px;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.parent header nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 25px;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition: all .35s;
+}
+
+.parent header nav a:hover::after {
+    width: 100%;
+}
+
+.parent header nav a span {
+    color: var(--main-Color);
+    font-weight: 800;
+}
+
+/* Header End */
+
+/* Start Main */
+.parent main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    place-content: center;
+    padding: 100px;
+}
+
+.parent main .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.parent main h2 {
+    color: var(--firsttext-Color);
+    font-size: 40px;
+    text-align: center;
+}
+
+.parent main h5 {
+    color: var(--firsttext-Color);
+}
+
+.parent main h5 span {
+    color: var(--main-Color);
+}
+
+.parent main p {
+    color: var(--firsttext-Color);
+    font-size: 20px;
+    text-align: center;
+}
+
+.parent main button {
+    background-color: transparent;
+    outline: none;
+    border: 2px solid var(--main-Color);
+    padding: 10px 20px;
+    margin: 30px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+.parent main button::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    background-color: #2e3192;
+    transition: all 0.3s;
+    z-index: -1;
+}
+.parent main button:hover::before {
+    top: 0px;
+}
+
+.parent main button a {
+    color: var(--firsttext-Color);
+
+}
