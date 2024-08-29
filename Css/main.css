@@ -119,7 +119,7 @@ a {
 
 /* Start Main */
 .parent main {
-    height: 100%;
+    height: calc(100% - 100px);
     display: flex;
     justify-content: center;
     place-content: center;
